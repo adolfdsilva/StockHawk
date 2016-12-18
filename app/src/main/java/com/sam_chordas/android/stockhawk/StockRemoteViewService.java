@@ -75,7 +75,7 @@ public class StockRemoteViewService extends RemoteViewsService {
                 }
 
                 // Get the layout
-                RemoteViews views = new RemoteViews(getPackageName(), R.layout.widget_collection_layout);
+                RemoteViews views = new RemoteViews(getPackageName(), R.layout.widget_collection_item);
 
                 // Bind data to the views
                 views.setTextViewText(R.id.stock_symbol, data.getString(data.getColumnIndex
@@ -95,7 +95,7 @@ public class StockRemoteViewService extends RemoteViewsService {
 
                 final Intent fillInIntent = new Intent();
                 fillInIntent.putExtra(Constants.SYMBOL, data.getString(data.getColumnIndex(QuoteColumns.SYMBOL)));
-                views.setOnClickFillInIntent(R.id.list_stock_widget, fillInIntent);
+                views.setOnClickFillInIntent(R.id.widget_list_item, fillInIntent);
 
                 return views;
             }

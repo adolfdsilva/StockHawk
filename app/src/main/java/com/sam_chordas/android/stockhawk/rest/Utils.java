@@ -31,6 +31,9 @@ public class Utils {
                 jsonObject = jsonObject.getJSONObject("query");
                 int count = Integer.parseInt(jsonObject.getString("count"));
                 if (count == 1) {
+                    if (jsonObject.getString("Bid") == null)
+                        return null;
+
                     jsonObject = jsonObject.getJSONObject("results")
                             .getJSONObject("quote");
                     batchOperations.add(buildBatchOperation(jsonObject));

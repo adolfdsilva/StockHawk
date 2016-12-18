@@ -22,6 +22,7 @@ import com.squareup.okhttp.Response;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 
 /**
  * Created by sam_chordas on 9/30/15.
@@ -127,8 +128,12 @@ public class StockTaskService extends GcmTaskService {
                         mContext.getContentResolver().update(QuoteProvider.Quotes.CONTENT_URI, contentValues,
                                 null, null);
                     }
-                    mContext.getContentResolver().applyBatch(QuoteProvider.AUTHORITY,
-                            Utils.quoteJsonToContentVals(getResponse));
+                    ArrayList list = Utils.quoteJsonToContentVals(getResponse);
+                    if (list != null && list.size() > 0)
+                        mContext.getContentResolver().applyBatch(QuoteProvider.AUTHORITY,
+                                list);
+                    else
+                        result = GcmNetworkManager.RESULT_FAILURE;
                 } catch (RemoteException | OperationApplicationException e) {
                     Log.e(LOG_TAG, "Error applying batch insert", e);
                 }
