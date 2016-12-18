@@ -20,7 +20,7 @@ import com.sam_chordas.android.stockhawk.data.QuoteProvider;
  * Created by Audi on 20/11/16.
  */
 
-public class StockDetails extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+public class StockDetailsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private String symbol;
     private static final int LOADER_ID = 0;

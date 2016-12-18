@@ -28,7 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.StockDetails" />
+        <activity android:name=".ui.StockDetailsActivity" />
 
         <service
             android:name="com.sam_chordas.android.stockhawk.service.StockTaskService"

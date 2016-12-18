@@ -96,7 +96,7 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
         mCursorAdapter.setClickListerner(new QuoteCursorAdapter.ClickListerner() {
             @Override
             public void onItemClick(String symbol) {
-                Intent intent = new Intent(getApplicationContext(),StockDetails.class);
+                Intent intent = new Intent(getApplicationContext(),StockDetailsActivity.class);
                 intent.putExtra(Constants.SYMBOL,symbol);
                 startActivity(intent);
             }

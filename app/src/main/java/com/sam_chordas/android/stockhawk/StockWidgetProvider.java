@@ -12,6 +12,7 @@ import android.support.v4.app.TaskStackBuilder;
 import android.widget.RemoteViews;
 
 import com.sam_chordas.android.stockhawk.ui.MyStocksActivity;
+import com.sam_chordas.android.stockhawk.ui.StockDetailsActivity;
 
 /**
  * Created by Audi on 12/12/16.
@@ -35,7 +36,7 @@ public class StockWidgetProvider extends AppWidgetProvider {
                 setRemoteAdapterV11(context, views);
             }
             // Set up collection items
-            Intent clickIntentTemplate = new Intent(context, MyStocksActivity.class);
+            Intent clickIntentTemplate = new Intent(context, StockDetailsActivity.class);
             PendingIntent clickPendingIntentTemplate = TaskStackBuilder.create(context)
                     .addNextIntentWithParentStack(clickIntentTemplate)
                     .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
