@@ -12,12 +12,12 @@
     <string name="network_toast">Uh-oh! This app requires an internet connection</string>
     <string name="title_widget">Today</string>
     <string name="network_error" translatable="false">No Internet Connection.</string>
-
+    <string name="t_already_saved">This stock is already saved!</string>
 
     <!-- Content Descriptions -->
     <string name="content_description_add_stock" translatable="false">Add a stock item</string>
     <string name="bid_price">Bid Price</string>
     <string name="time">Time</string>
 
-        <string name="time">This stock is already saved!</string>
+
 </resources>
