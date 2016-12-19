@@ -19,4 +19,5 @@
     <string name="bid_price">Bid Price</string>
     <string name="time">Time</string>
 
+        <string name="time">This stock is already saved!</string>
 </resources>
