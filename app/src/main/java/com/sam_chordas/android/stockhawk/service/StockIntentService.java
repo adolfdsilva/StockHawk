@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.gcm.GcmNetworkManager;
 import com.google.android.gms.gcm.TaskParams;
+import com.sam_chordas.android.stockhawk.R;
 
 /**
  * Created by sam_chordas on 10/1/15.
@@ -40,7 +41,7 @@ public class StockIntentService extends IntentService {
             new Handler(Looper.getMainLooper()).post(new Runnable() {
                 @Override
                 public void run() {
-                    Toast.makeText(getApplicationContext(), "Stock Not Found", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.t_stock_nf), Toast.LENGTH_LONG).show();
                 }
             });
 
